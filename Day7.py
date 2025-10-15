@@ -9,7 +9,7 @@ import random
 
 
 
-with open(r"C:\Users\Parth Soni\OneDrive - IIT Delhi\Documents\Python\common_english_words.txt") as f:
+with open(r"C:\Users\HD176PR\OneDrive - EY\Documents\Python_sessions\common_english_words.txt") as f:
     words = f.read().splitlines()
 word = random.choice(words)
 print(word)
