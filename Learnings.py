@@ -5,6 +5,7 @@
 | Modify global variable | ❌ No                | ✅ Yes          | Avoid — pass as argument |
 """
 
+# Section1: Lists and Loops
 
 # Print all elements of a list in reverse order using a loop (without using reversed() or slicing).
 alph = ['a','b','c','d','e']
@@ -140,169 +141,6 @@ for i in set_list3:
     freq_dict[i] = f"{count} times" 
 print(freq_dict)
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Bubble -sort algorithm
 arr = [64, 34, 25, 12, 22, 11, 90]
@@ -355,5 +193,18 @@ while i < len(patternlist):
     print(*pattern)                  #notice the *
     i+=1
 
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+i = 0
+j = 0
+zip_list = []
+while i < len(list1) and j < len(list2):
+    zip_list.append((list1[i],list2[j]))
+    i += 1
+    j += 1
+print(zip_list)
 
-    
+print(list(zip('abcdefg', range(3), range(4))))
+
+
+#Section 2 :Functions, String manupulations, Dictionaries, Sets and File handling
