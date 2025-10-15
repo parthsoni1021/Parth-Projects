@@ -19,6 +19,15 @@ for i in range(0,len(word)):
     blanks += "-"
 print(blanks)
 
+def replace_blank(index_list, letter, blanks):
+    blank_list = list(blanks)
+
+    for i in index_list:
+        blank_list[i] = letter
+
+    blank_new = "".join(blank_list)
+    return blank_new
+
 def find_indexes(letter, word):
     word_list = []
     for i in range(0,len(word)):
@@ -37,21 +46,25 @@ def guessed_correct(letter, word):
     else:
         return False
 
-def replace_blank(index_list, letter, blank_str):
-    blank_list = []
-    for _ in range(len(blank_str)):                       # 0 included
-        # blank_list = [].append('-')                       # append returns none, so blank_list is NoneType
-                                                        # print(type(blank_list))
-                                                        # print(type(index_list))
-        blank_list.append('-')   
-    for i in range(len(index_list)):
-        blank_list[index_list[i]] = letter
+# def replace_blank(index_list, letter):
+#     blank_list = []
+#     for _ in range(len(blank_str)):                       # 0 included
+#         # blank_list = [].append('-')                       # append returns none, so blank_list is NoneType
+#                                                         # print(type(blank_list))
+#                                                         # print(type(index_list))
+#         blank_list.append('-')   
+#     for i in range(len(index_list)):
+#         blank_list[index_list[i]] = letter
 
-    blank_new = ""
-    for i in range(len(blank_list)):
-        blank_new = blank_new + blank_list[i]
-    #print(blank_new)
-    return blank_new
+#     blank_new = ""
+#     for i in range(len(blank_list)):
+#         blank_new = blank_new + blank_list[i]
+#     #print(blank_new)
+#     return blank_new
+
+
+
+
 
 def word_found(blank_new):
     if blank_new == word:
@@ -142,6 +155,7 @@ while no_of_wrong_guesses < 5:
     inp = input("Guess the letter: ")
     if guessed_correct(inp, word) == True:
         ind = find_indexes(inp, word)
+        blanks = replace_blank(ind, inp, blanks)
         print(replace_blank(ind, inp, blanks))
     else:
         no_of_wrong_guesses += 1
