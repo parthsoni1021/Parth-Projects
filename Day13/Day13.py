@@ -12,7 +12,7 @@
 
 
 import random 
-import maths
+import Day13.maths as maths
 
 def mutate(a_list):
     b_list = []

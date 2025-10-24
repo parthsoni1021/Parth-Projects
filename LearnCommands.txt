@@ -1,0 +1,154 @@
+The PowerShell command:
+Get-Command python
+Is used to find how and where the python command is being resolved in your system.
+
+🔍 What It Tells You
+When you run Get-Command python, PowerShell will show:
+
+CommandType: Whether it's an application, alias, function, etc.
+Name: The command name (python)
+Version: If available
+Source: Where it's coming from (e.g., WindowsApps, Anaconda, etc.)
+Path: The full path to the executable being used
+
+
+✅ Why It's Useful
+
+Helps you identify which Python interpreter is being used when you type python.
+Useful when you have multiple Python installations (e.g., Anaconda, Microsoft Store, python.org).
+Helps troubleshoot version mismatch or PATH conflicts.
+
+_____________________________________________________________________
+
+That command you ran:
+python -c "import sys; print(sys.executable, sys.version)"
+is a quick way to check:
+✅ 1. Which Python interpreter is being used
+
+sys.executable returns the full path to the Python executable currently running.
+In your case:
+C:\Users\HD176PR\AppData\Local\anaconda3\python.exe
+
+This means you're using Python from Anaconda, not the global or Microsoft Store version.
+
+_____________________________________________________________________
+
+Great question, Parth! You're diving into the command-line world, and understanding flags like -m, -c, and the differences between PowerShell (PS) and Command Prompt (CMD) will really help you navigate Python and scripting more confidently.
+
+🧠 What Are -m, -c, --option in Python Commands?
+These are command-line flags or options passed to the Python interpreter. Here's what the common ones do:
+
+✅ Common Python Flags
+
+-m            Run a Python module as a script                         python -m pip install numpy runs the pip module
+-c            Run a Python command directly from the command line     python -c "print('Hello')"
+--version     Show Python version                                     python --version
+--help        Show help info for Python CLI                           python --help
+
+🧠 What Are --option Flags?
+These are long-form options used by many command-line tools (including pip, conda, etc.). Examples:
+
+--upgrade: Upgrade a package
+--user: Install package for current user only
+--force-reinstall: Reinstall even if already installed
+
+Example:
+python -m pip install numpy --upgrade --userShow more lines
+
+🔄 PowerShell vs CMD: What's the Difference?
+Example:
+In CMD:
+dir
+
+In PowerShell:
+Get-ChildItem
+
+Both can run Python, but PowerShell is more modern and flexible.
+
+===============================
+🐍 PYTHON + POWERSHELL/CMD CHEAT SHEET
+-------------------------------
+🔹 PYTHON COMMAND-LINE BASICS
+-------------------------------
+python --version                  # Show Python version
+python -m pip list               # List installed packages
+python -m pip install <package>  # Install a package
+python -m pip uninstall <package> # Uninstall a package
+python -c "print('Hello')"       # Run a quick Python command
+python -m venv <env-name>        # Create a virtual environment
+python -m site                   # Show Python paths
+python -m pip show <package>     # Show package details
+
+-------------------------------
+🔹 COMMON PYTHON FLAGS
+-------------------------------
+-m        # Run a module as a script
+-c        # Run a command inline
+--version # Show version info
+--help    # Show help info
+
+-------------------------------
+🖥️ POWERSHELL VS CMD
+-------------------------------
+Feature           | PowerShell (PS)       | Command Prompt (CMD)
+------------------|------------------------|-------------------------
+Shell Type        | Object-oriented        | Text-based
+Scripting         | .ps1 scripts           | .bat scripts
+Output            | Structured objects     | Plain text
+List files        | Get-ChildItem          | dir
+Find Python       | Get-Command python     | where python
+
+-------------------------------
+⚙️ ENVIRONMENT MANAGEMENT
+-------------------------------
+
+🧪 Conda (Anaconda)
+-------------------
+conda info --envs                 # List Conda environments
+conda activate <env>              # Activate Conda environment
+conda deactivate                  # Deactivate Conda environment
+conda install <package>           # Install package via Conda
+conda create -n <env> python=3.12 # Create new Conda environment
+
+🌐 Virtualenv / venv
+-------------------
+python -m venv <env-name>         # Create virtual environment
+<env-name>\Scripts\activate       # Activate (Windows)
+source <env-name>/bin/activate    # Activate (Linux/macOS)
+deactivate                        # Deactivate environment
+
+🌐 Global Python
+-------------------
+where python (CMD)            # Show Python executables in PATH
+Get-Command python (PS)       # Show Python command details
+python -m pip install <pkg>   # Install in global environment
+
+🔹 PIP COMMAND OPTIONS
+-------------------------------
+pip install <package>             # Install a package
+pip install <package>==<version>  # Install specific version
+pip install --upgrade <package>   # Upgrade a package
+pip install --user <package>      # Install for current user only
+pip install --force-reinstall <package> # Reinstall even if already installed
+pip uninstall <package>           # Uninstall a package
+pip list                          # List installed packages
+pip show <package>                # Show package details
+pip freeze                        # Output installed packages in requirements format
+
+-------------------------------
+🧠 USEFUL PYTHON SNIPPETS
+-------------------------------
+import sys
+print(sys.executable)             # Show current Python interpreter path
+print(sys.version)                # Show Python version
+print(sys.path)                   # Show module search paths
+-------------------------------
+
+🧠 TIPS
+-------------------------------
+- Use `python -m pip` instead of just `pip` to ensure correct environment.
+- Use `sys.executable` in a script to check which Python is running:
+  import sys
+  print(sys.executable)
+
+===============================
