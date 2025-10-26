@@ -1,4 +1,4 @@
-"""print("Criteria to ride")
+print("Criteria to ride")
 a = float(input("Enter your height (in cm) "))
 
 if a >= 120:
@@ -18,9 +18,9 @@ if a >= 120:
         print(f"Your total bill is {d}")
 else:
     print("Can't ride")
-"""
 
-"""
+
+
 #Python Pizza delivers
 print("Welcome to python pizza delivery")
 size = input("What is the size of the pizza you want? S, M or L "))
@@ -47,9 +47,9 @@ if cheese == "Y":
 
 print("Your final bil is $", bill)
 
-"""
 
-"""
+
+
 print(not 5)
 print(not 0)
 print(not 1)
@@ -61,8 +61,8 @@ if a >= b and a != b:
 elif not a >= b and a != b:
     print("B")
 else:
-    print("C)
-"""
+    print("C")
+
 print('''
            ___
   (o|_+_|o) 

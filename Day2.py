@@ -1,4 +1,3 @@
-"""
 print(len(str(123456)))  #Typecasting
 print('Hello'[0])   #Subscripting
 print(123+345)
@@ -13,7 +12,7 @@ Age = 21
 print(int(52.81))
 
 print(f"Your name is {name}, age is {Age}")
-"""
+
 
 
 print("Welcome to the tip calculator")

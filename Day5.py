@@ -1,9 +1,9 @@
 # Loops
 
-# fruits = ["apple", "banana", "mango", "orange", "grapes", "pineapple", "strawberry"]
-# for fruit in fruits:
-#     print(fruit)
-#     print(fruit + " pie")
+fruits = ["apple", "banana", "mango", "orange", "grapes", "pineapple", "strawberry"]
+for fruit in fruits:
+    print(fruit)
+    print(fruit + " pie")
     
 
 numbers = [3, 7, 12, 5, 9, 20, 15, 8, 1, 14]

@@ -1,7 +1,7 @@
 import random
 import os
 os.system("cls")
-"""
+
 # https://docs.python.org/3/library/random.html
 
 # random_integer = random.randint(1,10)  # 1 and 10 included
@@ -20,7 +20,7 @@ else:
     print("Tails")
 
 print(random.randint(0,1))
-"""
+
 
 
 #List Data structure - Ordered
