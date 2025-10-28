@@ -5,23 +5,24 @@ class User:            # a website's user let say. Written in PascalCase. camelC
 
 # now we've wrote the class declaration
 
-user_1 = User()              # object generally written in snake_case
-user_1.id = '001'
-user_1.username = 'parth'    # attribute assignment ( basically variable for a class )
+# user_1 = User()              # object generally written in snake_case
+# user_1.id = '001'
+# user_1.username = 'parth'    # attribute assignment ( basically variable for a class )
 
-print(user_1.id)
+# print(user_1.id)
 
-user_2 = User()
-user_2.id = '002'
-user_2.username = 'arsh'
+# user_2 = User()
+# user_2.id = '002'
+# user_2.username = 'arsh'
 
 # Now to avoid this repetition of making attributes for every object, we use constructors (initialization)
 
 class Car:
-    def __init__(self):
+    def __init__(self,seat):
         print('This will be called each time when a object is created')
+        self.seat = seat
 
-car_1 = Car()    # Output: "This will be called each time when a object is created"
+car_1 = Car(4)    # Output: "This will be called each time when a object is created"
 car_1.seat = 5
 print(car_1.seat)
 

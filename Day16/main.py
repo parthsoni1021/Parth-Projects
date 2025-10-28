@@ -83,6 +83,14 @@ while is_on:
                 if moneymachine_instance.make_payment(drink.cost):
                     coffeemaker_instance.make_coffee(drink)
 
+
+# If the user enters "latte", "espresso", or "cappuccino":
+#   drink will be an instance of the MenuItem class.
+# If the user enters something else:
+#   The method prints "Sorry that item is not available."
+#   drink will be None.
+
+# Even though I didn't explicitly create a MenuItem object yourself, the Menu class did when you instantiated it.
         
 
 
