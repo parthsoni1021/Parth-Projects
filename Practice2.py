@@ -154,7 +154,6 @@ def slow_function():
 slow_function()
 
 # Function apply_func(lst, func) that applies a function func to every element of lst.
-
 def apply_func(lst, func):
     result_list = []
     for i in lst:
@@ -166,8 +165,26 @@ def square(x):
 
 print(apply_func([1,3,5,7,9], square))
 
+def gm(list):
+    product = 1
+    for i in list:
+        product *= i
+    result = product ** (1/len(list))
+    return result
+lst = [i for i in range(1,11)]
+print("Geometric mean:",gm(lst))
 
+def hm(list):
+    res = 0
+    for i in list:
+        res += (1/i)
+    result = (len(list)/res)
+    return result
+print("Harmonic mean:",hm(lst))
 
+def am(list):
+    return sum(list)/len(list)
+print("Arithmetic mean:",am(lst), "\nHM penalises the lowest")
 
 
 
