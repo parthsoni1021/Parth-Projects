@@ -1,0 +1,8 @@
+Steps:
+1. Make the snake body (3 rectangles)
+2. Move it together
+3. Make it turn
+4. Introduce a food particle
+5. Detect collision. 
+6. Increase snake size and shift food direction
+7. Game over if collision with wall or self 

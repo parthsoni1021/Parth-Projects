@@ -152,3 +152,40 @@ print(sys.path)                   # Show module search paths
   print(sys.executable)
 
 ===============================
+
+What is pycache
+The __pycache__ folder is created by the Python interpreter to store the compiled bytecode of your Python modules. It's a performance optimization that allows your programs to start faster on subsequent runs by skipping the compilation step. 
+
+How it works
+When you run a Python script that imports a module (a .py file), the interpreter first checks if a compiled .pyc version of that module exists and is up-to-date in the __pycache__ directory.
+If the .pyc file is present and hasn't changed since the last execution, Python loads and runs the bytecode directly.
+If the .pyc file is missing or the original .py source file has been modified, Python will compile the module into new bytecode, save it to a .pyc file in the __pycache__ folder, and then execute it. 
+
+What is stored inside?
+Inside the __pycache__ folder, you will find files with a .pyc extension. The file names include the module's name and encode information about the specific Python version used to create it. For example, a file compiled from my_module.py on Python 3.12 might be named my_module.cpython-312.pyc. 
+
+Should you delete __pycache__?
+Yes, it is generally safe to delete the __pycache__ folder and its contents. 
+During development, you can delete the folder to clean up your project directory. It will be automatically regenerated the next time you run your code.
+For version control, such as Git, it is standard practice to add __pycache__/ and *.pyc to your .gitignore file. This prevents the auto-generated, system-specific files from being committed to your repository.
+For debugging, if you suspect that a change to your code isn't being reflected in the program's behavior, it's possible the interpreter is using a stale cached version. Deleting the folder forces a fresh recompile. 
+
+How to manage __pycache__
+Ignore in Git: Add __pycache__/ to your .gitignore file in the root of your project.
+
+Prevent creation: You can tell Python not to write bytecode cache files by running the interpreter with the -B flag (python -B my_script.py) or by setting the PYTHONDONTWRITEBYTECODE environment variable.
+
+Relocate the cache: For more advanced use cases, you can use the PYTHONPYCACHEPREFIX environment variable to store all __pycache__ folders in a single, centralized location. 
+=======================================================
+
+What is Python virtual machine
+A Python Virtual Machine (PVM) is the runtime engine that executes Python bytecode. When you run a Python program, the source code is first compiled into a lower-level, platform-independent bytecode. The PVM then interprets and executes this bytecode. 
+The standard and most widely used implementation of Python, CPython, includes its own PVM. Other implementations, like Jython (which runs on the Java Virtual Machine) and PyPy (which uses a Just-in-Time compiler), have their own variations.
+
+How the PVM works
+Code compilation: When you run a Python program, the interpreter first compiles your human-readable .py source code into bytecode, which is a set of instructions for the PVM.
+
+Bytecode storage: The bytecode is often saved in a file with a .pyc extension inside a __pycache__ directory. This allows Python to skip the compilation step on subsequent runs, which can improve performance.
+
+Interpretation: The PVM reads the bytecode instructions and executes them line by line.
+Hardware execution: During interpretation, the PVM translates the bytecode into native machine code that the underlying hardware (the CPU) can understand and run. 

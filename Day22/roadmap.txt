@@ -1,0 +1,10 @@
+Pong game
+
+1. Make basic interface of ball
+2. Randomly start the ball at random angle
+3. Make bats and central line
+4. Give functionality of moving the bats
+5. Calculate the incident angle with collison from wall or bat
+6. With collison, bounce the ball back at emergent angle = incident
+7. Make the scoreboard and Update it each time
+8. Define the criteria of game over
