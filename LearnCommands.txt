@@ -189,3 +189,12 @@ Bytecode storage: The bytecode is often saved in a file with a .pyc extension in
 
 Interpretation: The PVM reads the bytecode instructions and executes them line by line.
 Hardware execution: During interpretation, the PVM translates the bytecode into native machine code that the underlying hardware (the CPU) can understand and run. 
+
+============================================================
+
+Generally in classes
+
+mutating methods = “I changed the original, nothing to return.”   eg. list1.sort(desc), list1.append('abc')
+non-mutating functions = “I created something new, here it is.”   eg. sorted(list_name), str.upper()
+
+=============================================================

@@ -1,0 +1,13 @@
+#Instructions
+
+1. Turtle can only move up, not left right or down
+2. Cars are randomly generated from right to left of screen (18 rows)
+3. When turtle reach the top, it comes to the original position and level ups (speed of car increase)
+4. If turtle hits the car, game over.
+
+#Roadmap
+
+1. Create Turtle and set its position. Give feature of moving up
+2. Create random cars (diff colors) and let them move from left to right
+3. Detect the collison between turtle and car
+4. If there is no collison, reset the turtle, increase level and speed of car
