@@ -9,8 +9,8 @@ GREEN = '#9bdeac'
 BLUE = '#0000FF'
 YELLOW = '#f7f5dd'
 FONT_NAME = 'Courier'
-WORK_MIN = 0.1
-SHORT_BREAK_MIN = 0.1 
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5 
 LONG_BREAK_MIN = 20
 reps = 0
 
@@ -77,7 +77,7 @@ window.config(padx=30, pady=25, bg=YELLOW)
 
 
 canvas = Canvas(width=250, height=200, bg=YELLOW, highlightthickness=0)
-image_title = PhotoImage(file='tomato.png')
+image_title = PhotoImage(file=r'C:\Users\Parth Soni\OneDrive - IIT Delhi\Documents\Python\100_projects_in_100_days\Day28\tomato.png')
 canvas.create_image(125, 79, image=image_title)
 timer_text = canvas.create_text(125, 90, text='00:00', fill='white', font=(FONT_NAME, 17, 'bold'))
 canvas.grid(row=1,column=1)

@@ -18,7 +18,21 @@ phonetic_dict2 = {row.letter:row.code for (index,row) in df.iterrows()}       #2
 print(phonetic_dict2)
 
 # Todo2 - Create a list of phonetic words from the word user inputs
-user_input = input('Enter the word: ').upper()
-print([phonetic_dict[i] for i in user_input])
 
+def generate_phonetic():
+    
+    user_input = input('Enter the word: ').upper()
+
+    # if type(user_input) != str:    # Lol this will never work because input is always string
+    try:
+        output_list = [phonetic_dict[i] for i in user_input]
+    except KeyError:
+        print('Sorry, only letters in the alphabet please! ')
+        generate_phonetic()
+    else:
+        print(output_list)
+    
+generate_phonetic()
+
+# Notice how we incorporated the loop 
 
