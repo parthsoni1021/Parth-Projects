@@ -1,0 +1,32 @@
+# Ensure all text files use LF line endings
+* text=auto eol=lf
+
+# Python files
+*.py text eol=lf
+
+# Common text-based files
+*.txt text eol=lf
+*.md  text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+
+# Shell scripts (Unix line endings are important)
+*.sh text eol=lf
+
+# Windows batch scripts (keep CRLF)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files (don’t change line endings)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.exe binary
+*.dll binary
