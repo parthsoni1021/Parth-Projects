@@ -1,4 +1,4 @@
-# # # Section 2 :Functions, String manupulations, Dictionaries, Sets and File handling
+# # # Section 2 :Functions, String manipulations, Dictionaries, Sets and File handling
 
 # # # Write a function is_prime(n) that checks whether a number is prime. Use it to find all primes in a list.
 # # def isprime(n):

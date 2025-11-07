@@ -16,14 +16,14 @@ class Paddle(Turtle):
         
     def go_up(self):
         new_y = self.ycor() + 20
-        if new_y < 200:
+        if new_y < 230:
             self.goto(self.xcor(), new_y)
         else:
             new_y = new_y - 20
 
     def go_down(self):
         new_y = self.ycor() - 20
-        if new_y > -200:
+        if new_y > -230:
             self.goto(self.xcor(), new_y)
         else:
             new_y = new_y + 20

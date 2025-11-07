@@ -97,14 +97,3 @@ while attempts > 0:
     else:
         print("Too low")
         attempts -= 1
-
-
-
-
-
-
-
-
-
-
-

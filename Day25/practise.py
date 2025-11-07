@@ -82,12 +82,27 @@ with open('Day25/squirrel-data.csv', 'r') as f:
     # print(df.head(5))
 
     # print(df.info())
-    print(df.describe())
-    print(df.shape)
+print(df.describe())
+print(df.shape)
 
-    print(df.columns)
+print(df.columns)
 
-    df_
+gray_squrrels = df[df['Primary Fur Color'] == 'Gray']
+gray_squrrels_count = len(gray_squrrels)
+black_squirrels_count = len(df[df['Primary Fur Color'] == 'Black'])
+cinnamon_squirrels_count = len(df[df['Primary Fur Color'] == 'Cinnamon'])
+
+print(gray_squrrels_count)
+print(black_squirrels_count)
+print(cinnamon_squirrels_count)
+
+data_dict = {
+    'Fur Color': ['Grey', 'Cinnamon', 'Black'],
+    'Count' : [gray_squrrels_count, cinnamon_squirrels_count, black_squirrels_count]
+}
+
+df2 = pd.DataFrame(data_dict)
+df2.to_csv('squirrel_count.csv')
 
 
 
