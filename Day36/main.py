@@ -11,13 +11,18 @@ from datetime import datetime, timedelta
 truststore.inject_into_ssl()
 
 company_name = 'Amazon'
+STOCK_URL = 'https://www.alphavantage.co/query'
+NEWS_URL = "https://newsapi.org/v2/everything"
+STOCK_API_KEY = '87Q1JEXLFIBZ2IYY'
+NEWS_API_KEY = "0326bb771be8402bb4b2f434f4e5ec67"
+
 
 def stock_symbol(company_name):
-    url = 'https://www.alphavantage.co/query'
+    url = STOCK_URL
     params={
         'function': 'SYMBOL_SEARCH',
         'keywords':company_name,
-        'apikey':'87Q1JEXLFIBZ2IYY',
+        'apikey': STOCK_API_KEY,
     }
     r = requests.get(url, params=params)
     data = r.json()
@@ -26,7 +31,7 @@ def stock_symbol(company_name):
 print(stock_symbol('Amazon'))
 
 #alphavantage api 87Q1JEXLFIBZ2IYY   news_api 0326bb771be8402bb4b2f434f4e5ec67
-url = 'https://www.alphavantage.co/query'
+url = STOCK_URL
 params={
     'function': 'TIME_SERIES_DAILY',
     'symbol': stock_symbol(company_name),
@@ -92,11 +97,11 @@ def calculations():
 
 def trigger_news():
 
-    url = "https://newsapi.org/v2/everything"
+    url = NEWS_URL
 
     params = {
         "pageSize": 3,
-        "apiKey": "0326bb771be8402bb4b2f434f4e5ec67",
+        "apiKey": NEWS_API_KEY,
         "q": company_name,
         'from': day_before_str,
         'to': today_str,
@@ -104,7 +109,7 @@ def trigger_news():
 
     response = requests.get(url, params=params)
     data2 = response.json()
-    pyperclip.copy(data2)
+    # pyperclip.copy(data2)
     # print(response.json())   # response data
     news_list = []
     for i in data2['articles']:
