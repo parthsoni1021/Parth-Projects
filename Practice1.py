@@ -5,6 +5,11 @@
 | Modify global variable | ❌ No                | ✅ Yes          | Avoid — pass as argument |
 """
 
+import sys
+# print(sys.executable)             # Show current Python interpreter path
+# print(sys.version)                # Show Python version
+print(sys.path) 
+
 # Section1: Lists and Loops
 
 # Print all elements of a list in reverse order using a loop (without using reversed() or slicing).

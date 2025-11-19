@@ -121,7 +121,7 @@ deactivate                        # Deactivate environment
 -------------------
 where python (CMD)            # Show Python executables in PATH
 Get-Command python (PS)       # Show Python command details
-python -m pip install <pkg>   # Install in global environment
+python -m pip install <pkg>   # Install in current environment
 
 🔹 PIP COMMAND OPTIONS
 -------------------------------
@@ -198,3 +198,20 @@ mutating methods = “I changed the original, nothing to return.”   eg. list1.
 non-mutating functions = “I created something new, here it is.”   eg. sorted(list_name), str.upper()
 
 =============================================================
+
+python -c "import sys; print('Executable:', sys.executable); print('Version:', sys.version)"
+Executable: C:\Users\HD176PR\OneDrive - EY\Documents\Python_sessions\100_projects_in_100_days\100_days_code\Scripts\python.exe
+Version: 3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]
+
+✅ This means:
+
+The Python interpreter inside your venv is based on Anaconda’s Python distribution.
+Even though you used venv (not conda), the base interpreter was Anaconda’s Python because that’s what was active when you ran:
+python -m venv myenv
+
+So your virtual environment is independent of Conda, but it inherits Anaconda’s Python.
+
+🔍 Why this matters
+
+Your venv will behave like any normal virtual environment, but it uses Anaconda’s Python binaries and libraries.
+If you uninstall Anaconda, this venv might break because its interpreter came from Anaconda.

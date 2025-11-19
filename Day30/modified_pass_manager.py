@@ -94,7 +94,7 @@ window.title("Password Manager")
 window.config(padx=50, pady=50)
 
 canvas = Canvas(width=200, height=200, highlightthickness=0)
-image_logo = PhotoImage(file=r"C:\Users\Parth Soni\OneDrive - IIT Delhi\Documents\Python\100_projects_in_100_days\Day29\logo.png")
+image_logo = PhotoImage(file=r"C:\Users\HD176PR\OneDrive - EY\Documents\Python_sessions\100_projects_in_100_days\Day29\logo.png")
 canvas.create_image(100, 100, image=image_logo)
 canvas.grid(row=0, column=1)
 

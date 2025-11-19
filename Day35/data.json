@@ -1,0 +1,164 @@
+{
+  "cod": "200",
+  "message": 0,
+  "cnt": 4,
+  "list": [
+    {
+      "dt": 1763445600,
+      "main": {
+        "temp": 293.27,
+        "feels_like": 291.68,
+        "temp_min": 293.27,
+        "temp_max": 297.47,
+        "pressure": 1018,
+        "sea_level": 1018,
+        "grnd_level": 991,
+        "humidity": 13,
+        "temp_kf": -4.2
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 10
+      },
+      "wind": {
+        "speed": 2.58,
+        "deg": 327,
+        "gust": 3.02
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2025-11-18 06:00:00"
+    },
+    {
+      "dt": 1763456400,
+      "main": {
+        "temp": 295.38,
+        "feels_like": 294.02,
+        "temp_min": 295.38,
+        "temp_max": 299.6,
+        "pressure": 1017,
+        "sea_level": 1017,
+        "grnd_level": 988,
+        "humidity": 14,
+        "temp_kf": -4.22
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "clear sky",
+          "icon": "01d"
+        }
+      ],
+      "clouds": {
+        "all": 8
+      },
+      "wind": {
+        "speed": 3,
+        "deg": 330,
+        "gust": 3.58
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "d"
+      },
+      "dt_txt": "2025-11-18 09:00:00"
+    },
+    {
+      "dt": 1763467200,
+      "main": {
+        "temp": 295.32,
+        "feels_like": 294.14,
+        "temp_min": 295.32,
+        "temp_max": 296.35,
+        "pressure": 1015,
+        "sea_level": 1015,
+        "grnd_level": 988,
+        "humidity": 21,
+        "temp_kf": -1.03
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "clouds": {
+        "all": 13
+      },
+      "wind": {
+        "speed": 1.2,
+        "deg": 324,
+        "gust": 1.6
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2025-11-18 12:00:00"
+    },
+    {
+      "dt": 1763478000,
+      "main": {
+        "temp": 294.21,
+        "feels_like": 293.13,
+        "temp_min": 294.21,
+        "temp_max": 294.21,
+        "pressure": 1015,
+        "sea_level": 1015,
+        "grnd_level": 989,
+        "humidity": 29,
+        "temp_kf": 0
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "clouds": {
+        "all": 23
+      },
+      "wind": {
+        "speed": 0.6,
+        "deg": 335,
+        "gust": 0.92
+      },
+      "visibility": 10000,
+      "pop": 0,
+      "sys": {
+        "pod": "n"
+      },
+      "dt_txt": "2025-11-18 15:00:00"
+    }
+  ],
+  "city": {
+    "id": 1270644,
+    "name": "Gurgaon district",
+    "coord": {
+      "lat": 28.34,
+      "lon": 77.19
+    },
+    "country": "IN",
+    "population": 0,
+    "timezone": 19800,
+    "sunrise": 1763428548,
+    "sunset": 1763467035
+  }
+}

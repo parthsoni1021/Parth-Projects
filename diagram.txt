@@ -1,0 +1,70 @@
+[Anaconda Base Python 3.13.5]
+C:\Users\HD176PR\AppData\Local\anaconda3\
+├─ DLLs
+├─ Lib
+├─ python.exe  <-- base interpreter
+└─ site-packages  <-- global Anaconda packages
+
+            │
+            │  used as the base when creating a virtual environment
+            ▼
+
+[Virtual Environment: 100_days_code]
+C:\Users\HD176PR\Documents\Python_sessions\100_projects_in_100_days\100_days_code\
+├─ Scripts\
+│   └─ python.exe  <-- virtual env Python (copy of Anaconda Python)
+├─ Lib\
+│   └─ site-packages  <-- packages installed ONLY in this virtual environment
+└─ other virtualenv files
+
+            │
+            │  Your current Python session uses this python.exe
+            ▼
+
+[Current Python Session]
+sys.executable -> 100_days_code\Scripts\python.exe
+sys.path -> includes:
+    - project folder
+    - virtualenv site-packages
+    - inherited Anaconda Lib and DLLs
+
+
+-----------------------------------------------------------------------------------------------
+
++--------------------------------------------------+
+|                System Python                     |
+| (Windows-installed Python, not currently used)  |
++--------------------------------------------------+
+             │
+             ▼
++--------------------------------------------------+
+|               Anaconda Python 3.13.5            |
+| Base installation at:                            |
+| C:\Users\HD176PR\AppData\Local\anaconda3\      |
+|                                                  |
+| - python.exe                                    |
+| - Lib (standard libraries)                      |
+| - site-packages (global packages)              |
++--------------------------------------------------+
+             │
+             ▼
++--------------------------------------------------+
+|       Virtual Environment: 100_days_code        |
+| Location: C:\Users\HD176PR\Documents\Python_...|
+|                                                  |
+| - Scripts\python.exe  <-- interpreter you are   |
+|   currently using                               |
+| - Lib\site-packages <-- packages installed      |
+|   only in this virtual environment              |
+| - Can inherit standard libraries from Anaconda |
++--------------------------------------------------+
+             │
+             ▼
++--------------------------------------------------+
+|            Your Current Python Session          |
+| - sys.executable -> virtualenv python.exe      |
+| - sys.path -> includes:                         |
+|    * project folder                             |
+|    * virtualenv site-packages                   |
+|    * Anaconda Lib/DLLs                          |
++--------------------------------------------------+

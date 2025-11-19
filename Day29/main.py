@@ -1,4 +1,6 @@
 from tkinter import * 
+from PIL import Image, ImageTk
+
 PINK = '#e2979c'   #colorhunt.co
 RED = '#e7305b'
 GREEN = '#9bdeac'
@@ -24,7 +26,7 @@ try:
 	image_logo = PhotoImage(file='logo.png')
 except Exception:
 	# Using ImageTk pillow lets us support a wider range of PNG/JPEG formats.
-	from PIL import Image, ImageTk
+	
 	img = Image.open('logo.png')
 	image_logo = ImageTk.PhotoImage(img)
 

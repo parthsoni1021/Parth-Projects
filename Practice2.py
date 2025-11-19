@@ -1,72 +1,94 @@
-# # # Section 2 :Functions, String manipulations, Dictionaries, Sets and File handling
+# Section 2 :Functions, String manipulations, Dictionaries, Sets and File handling
 
-# # # Write a function is_prime(n) that checks whether a number is prime. Use it to find all primes in a list.
-# # def isprime(n):
-# #     for i in range(2,n):
-# #         if n % i == 0:
-# #             return False
-# #     return True
-# # list1 = [2,5,7,8,10,11,12,13]
-# # print([isprime(i) for i in list1])
+# Write a function is_prime(n) that checks whether a number is prime. Use it to find all primes in a list.
+def isprime(n):
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+    return True
 
-# # # Write a recursive function factorial(n) to compute factorial.
-# # def factorial(n):
-# #     if n in [0,1]:
-# #         return 1
-# #     else:
-# #         return n * factorial(n-1)
+list1 = [2,5,7,8,10,11,12,13]
+print([isprime(i) for i in list1])
+
+# Write a recursive function factorial(n) to compute factorial.
+def factorial(n):
+    if n in [0,1]:
+        return 1
+    else:
+        return n * factorial(n-1)
     
-# # print(factorial(5))
+print(factorial(5))
 
-# # # Function reverse_string(s) that reverses a string without using slicing.
-# # def rev_str(string):
-# #     newstr = ""
-# #     for i in range(len(string)-1,-1,-1): 
-# #         newstr += string[i]
-# #         print(i)
-# #     return newstr
+# Function reverse_string(s) that reverses a string without using slicing.
+def rev_str(string):
+    newstr = ""
+    for i in range(len(string)-1,-1,-1): 
+        newstr += string[i]
+        print(i)
+    return newstr
 
-# # print('parth'[3])
-# # print(rev_str("parth"))
+print('parth'[3])
+print(rev_str("parth"))
 
-# # # better solution
-# # def rev_str2(string):
-# #     for i in string:
-# #         newstr = "" + i
-# #     return newstr
+# better solution
+def rev_str2(string):
+    rev_list = reversed(list(string))
+    newstr = "".join(rev_list)
+    return newstr
+print(rev_str2('howareyou'))
 
-# # # Function count_vowels_consonants(s) that returns a dictionary like {"vowels": 3, "consonants": 5}.
-# # def count_vowels_consonants(word):
-# #     dict_vowels_consonants = {
-# #         "vowels": 0,
-# #         "consonants": 0
-# #     }
-# #     vowels = list('aeiou')
-# #     for i in word.lower():
-# #         if i in vowels:
-# #             dict_vowels_consonants["vowels"] += 1
-# #         else:
-# #             dict_vowels_consonants["consonants"] += 1
+#better solution
+def rev_str3(string):
+    newstr = ''
+    for i in string:
+        newstr = i + newstr
+    return newstr
+
+print(rev_str3('helloworld'))
+
+# Function count_vowels_consonants(s) that returns a dictionary like {"vowels": 3, "consonants": 5}.
+def count_vowels_consonants(word):
+    dict_vowels_consonants = {
+        "vowels": 0,
+        "consonants": 0
+    }
+    vowels = list('aeiou')
+    for i in word.lower():
+        if i in vowels:
+            dict_vowels_consonants["vowels"] += 1
+        else:
+            dict_vowels_consonants["consonants"] += 1
             
-# #     return dict_vowels_consonants
+    return dict_vowels_consonants
 
-# # print(count_vowels_consonants('ParthSoni'))
+print(count_vowels_consonants('ParthSoni'))
 
-# # Write a function fibonacci(n) that returns the first n Fibonacci numbers as a list.
-# # output = [0,1,1,2,3,5,8,13,21,34,55] n terms
+# Write a function fibonacci(n) that returns the first n Fibonacci numbers as a list.
+output = [0,1,1,2,3,5,8,13,21,34,55] #n terms
 
-# def fib(n):
-#     a = 0
-#     b = 1   
-#     fib_list = [0,1]
-#     while len(fib_list) < n:
-#         fib_list.append(a+b)        
-#         a,b = b, a+b
-#     return fib_list
+def fib(n):
+    a = 0
+    b = 1   
+    fib_list = [0,1]
+    while len(fib_list) < n:
+        fib_list.append(a+b)        
+        a,b = b, a+b
+    return fib_list
 
-# print(fib(11))
+print(fib(11))
 
 # Function flatten_list(lst) to convert a nested list like [1, [2, 3], [4, [5,6]]] → [1,2,3,4,5,6].
+list1 = [1,2,3,4,5]
+list2 = list1.extend([2,4,6])  # extend modifies the original list in place and returns None.
+print(list2)
+print(list1)
+# difference between extend and append
+
+list1.append([2,3,4])  #takes only 1 input argument
+print(list1)
+
+
+
 def flatten_list(lst, flat_list = None):
     if flat_list == None:
         flat_list = []    

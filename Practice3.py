@@ -1,4 +1,4 @@
-# Object oriented programming systems
+"""# Object oriented programming systems
 
 # procedural -> Functional -> Object oriented
 # List, string etc. all were classes
@@ -65,7 +65,7 @@ print(car1.color)
 # Encapsulation: Wrapping data and related functions into a single unit (object).
 
 
-"""
+
 # Quesition:
 # Create account class with 2 attributes - balance and account number
 # Create methods for debit, credit and printing the balance
@@ -93,7 +93,7 @@ class Account:
 acc1 = Account(10000, 123455)
 print(acc1.get_balance())
 acc1.credit(2500)   
-"""
+
 
 
 class Cars():
@@ -278,3 +278,43 @@ stu1.percentage
 print(stu1.percentage)
 
 #Polymorphism
+"""
+
+# Function flatten_list(lst) to convert a nested list like [1, [2, 3], [4, [5,6]]] → [1,2,3,4,5,6].
+
+def flatten_list(list):
+    flat_list = []
+    for i in list:
+        if type(i) in (str, bool, int, float):
+            flat_list.append(i)
+            
+
+
+print(flatten_list([1, [2, 3], [4, [5,6]], [1, [2, 3], [4, [5,6]]]]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
