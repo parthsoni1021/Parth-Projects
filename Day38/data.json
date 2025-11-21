@@ -1,0 +1,12 @@
+[  
+  {
+    "exercise name": "Ran 2 miles",
+    "calories burnt": 160,
+    "description": "Calories burnt is estimated as a 154-pound person running at a moderate pace of 6 miles per hour for 20 minutes, burning approximately 160 calories"
+  },
+  {
+    "exercise name": "Walked for 3 km",
+    "calories burnt": 135,
+    "description": "Calories burnt is estimated as a 154-pound person walking at a moderate pace of 3 miles per hour for 37 minutes, burning approximately 135 calories"
+  }
+]

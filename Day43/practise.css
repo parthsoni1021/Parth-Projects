@@ -1,0 +1,35 @@
+ol {
+    margin-left: -40px;
+    margin-top: -20px;
+    list-style-position: inside;
+}
+
+
+/* CSS code for practise.html */
+
+
+/* for paragraph element selector */
+p {
+    color: red;
+}
+
+/* for class selector */
+.note {
+    font-size: 20px;
+}
+
+/* for id selector */
+#id-selector-demo {
+    color: green;
+}
+
+/* for value selector */
+li[value="4"]{
+    color: blue;
+}
+
+/* for universal selector */
+* {
+    text-align: center;
+    
+}

@@ -1,0 +1,73 @@
+paragraph tag : To distinguish where one paragraph begin and one ends. Separated by a line in between
+<h1> Top movies according to me</h1>
+<p> This is a paragraph</p>
+
+Generally <p> and <br> are confused. So keep caution 
+Void elements : Single tag. Doesn't have any content in it. Looks like closing tag but isn't
+Horizontal rule, break 
+<hr/>   
+<br/> 
+diffchecker.com
+ive Reload is not possible without a head or body tag.
+
+<p> This is movie 2</p>
+
+List, ordered and unordered
+<ul>
+<li>Milk</li>   List items
+<li>Water</li> 
+<li>Flour</li> 
+</ul>
+
+<ol>
+    <li>Milk</li>   List items
+    <li>Water</li> 
+    <li>Flour</li>
+</ol>
+
+Nesting and Indentation
+Embed Entire list inside another list. 
+
+Anchor tag
+<tag attribute="value" anotherattribute="value">Content</tag>
+There are global and anchor specific attributes. Can be seen at mozilla documentation
+
+Image tag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

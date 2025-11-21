@@ -1,0 +1,70 @@
+CASCADING STYLE SHEET - A STYLE SHEET LANGUAGE 
+similar to Saas (Syntactically Awesome Style Sheets), XSL (Extensible SS Lang), JSSL (JavaScript SS Lang) etc
+
+How to add CSS to HTML Website- Inline, Internal and External
+
+<tag style='css'/>          # Inline
+<style>css</style>          # Internal
+<link href='style.css'/>    #External
+
+
+1. Inline
+/* Goes in the same line as html line. For only a single html element in the page  */
+
+<html style="background:blue">
+</html>
+
+"background:blue" = "property:vlaue"
+---------------------------------------------
+
+2. Internal CSS
+<html>
+    <head>
+        <style>
+            html {
+                background: red;
+            }
+        <style>
+    </head>
+</html>
+
+A selecter between the curly braces   { css }
+Advisable to use only for one html page. Not when the website has multiple html pages
+-----------------------------------------------
+
+3. External CSS
+External file - style.css or main.css
+
+Inside the head section of the html, add a link tag.
+
+<html>
+    <head>
+        <link
+            rel='stylesheet'
+            href="./styles.css"
+        />
+    </head>
+</html>
+
+styles.css looks like       html {
+                                background: red;
+                            }
+------------------------------------------------
+
+CSS Selector 
+A part that selected the HTML in order to apply whichever rules go in between the curly braces
+
+eg. Element selector, Class selector (.), Id selector (#) - Unique for only 1 element, unlike class, 
+attribute selector (element[<attribute>]) - Can be selected by passing a parameter, universal selector (*)
+
+.html file
+<h1 clas='title'> Hello <h1/>
+<h2 id='heading'> World <h2/>
+<p draggable='true'> Drag me <p/>
+<p draggable='false'> Dont Drag me <p/>
+<p draggable='false'> Dont Drag me <p/>
+
+.css file 
+p[draggable='false']{
+    color:red;
+}

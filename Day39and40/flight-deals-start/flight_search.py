@@ -1,8 +1,8 @@
-import os, requests
+import os, requests, truststore
 from dotenv import load_dotenv
 
 load_dotenv()
-
+truststore.inject_into_ssl()
 AMADEUS_API_KEY = os.environ.get('AMADEUS_API_KEY')
 AMADEUS_API_SECRET = os.environ.get('AMADEUS_API_SECRET')
 
